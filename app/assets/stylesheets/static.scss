@@ -1,0 +1,67 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$almost-black: #111;
+$header-height: 64px;
+
+body {
+  color: $almost-black;
+}
+
+header {
+  overflow: hidden;
+  width: 100%;
+  height: $header-height;
+  background-color: #aea;
+  padding: 0 40px;
+
+  a {
+    text-decoration: none;
+    color: $almost-black;
+    &:hover {
+      color: green;
+    }
+  }
+
+  #header-logo {
+    float: left;
+    line-height: $header-height;
+    h1 {
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  #header-menu {
+    float: right;
+    li {
+      display: inline;
+      line-height: $header-height;
+      padding: 0 8px;
+    }
+  }
+}
+
+main {
+  background-image: url("/sneaker_mesh_fabric.png");
+  background-repeat: repeat;
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    min-height: 600px;
+    font-size: 16px;
+  }
+}
+
+footer {
+  padding-top: 16px;
+  text-align: center;
+  color: #363;
+}
+
+// top
+h2#top-eyecatch {
+  font-size: 32px;
+  padding: 160px 0 80px;
+}

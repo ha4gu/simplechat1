@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+/* フォント設定 */
+/* 参考: http://neos21.hatenablog.com/entry/2017/11/12/080000 */
+
+/* Windows 用 Medium 指定の游ゴシック */
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Medium");
+}
+/* font-weight: bold の時は通常どおり Bold 書体を使わせる */
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+/* ゴシック体指定 */
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", HelveticaNeue, "Segoe UI", "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS Pゴシック", "MS PGothic", sans-serif;
+line-height: 1.7;
+}
+
+/* 等幅 */
+code {
+font-size: 100%;
+font-family: MeiryoKe_Gothic, "Ricty Diminished", "Osaka-等幅", "Osaka-等幅", Osaka-mono, "MS ゴシック", "MS Gothic", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", monospace;
+line-height: 1.7;
+}
