@@ -1,0 +1,67 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#posts {
+  padding: 40px 0;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.post {
+  //background-color: #c9c;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  width: 80%;
+  border: 4px black solid;
+  border-radius: 16px;
+  padding: 16px;
+  background-color: white;
+}
+
+.post-author {
+  width: 20%;
+}
+
+.post-message {
+  hyphens: auto;
+  text-align: left;
+}
+
+.post-datetime {
+  text-align: right;
+}
+
+.author-icon {
+  height: 64px;
+  width: 64px;
+  border: 4px black solid;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.others-post {
+  overflow: hidden;
+
+  .post-content {
+    float: right;
+  }
+  .post-author {
+    float: left;
+  }
+
+}
+
+.my-post {
+  overflow: hidden;
+
+  .post-content {
+    float: left;
+  }
+  .post-author {
+    float: right;
+  }
+
+}

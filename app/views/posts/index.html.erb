@@ -1,0 +1,78 @@
+<main>
+  <div class="container">
+    <div id="posts">
+
+      <% @posts.each do |post| %>
+        <div class="post others-post">
+          <div class="post-content">
+            <p class="post-message">
+              <%= post.message %>
+            </p>
+            <p class="post-datetime">
+              <%= link_to(post.created_at, "/chat/#{post.id}") %>
+            </p>
+          </div>
+          <div class="post-author">
+            <img class="author-icon" src="/icon_113240_256.png" alt="">
+            <p class="author-name">
+              <%= post.author %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="post others-post">
+        <div class="post-content">
+          <p class="post-message">
+            This is a post.
+            The quick brown fox jumps over the lazy dog.
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p class="post-datetime">
+              2018-12-13 11:31:05
+          </p>
+        </div>
+        <div class="post-author">
+          <img class="author-icon" src="/icon_113240_256.png" alt="">
+          <p class="author-name">Hoge-O!</p>
+        </div>
+      </div>
+
+      <div class="post my-post">
+        <div class="post-content">
+          <p class="post-message">
+            This is a post.
+            The quick brown fox jumps over the lazy dog.
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p class="post-datetime">
+            2018-12-13 11:31:05
+          </p>
+        </div>
+        <div class="post-author">
+          <img class="author-icon" src="/icon_118140_256.png" alt="_">
+          <p class="author-name">Jaison Taro</p>
+        </div>
+      </div>
+
+      <div class="post others-post">
+        <div class="post-content">
+          <p class="post-message">
+            This is a post.
+            The quick brown fox jumps over the lazy dog.
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p class="post-datetime">
+            2018-12-13 11:31:05
+          </p>
+        </div>
+        <div class="post-author">
+          <img class="author-icon" src="/icon_113240_256.png" alt="">
+          <p class="author-name">Hoge-O!</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,24 @@
+<main>
+  <div class="container">
+    <div id="posts">
+
+      <div class="post others-post">
+        <div class="post-content">
+          <p class="post-message">
+            <%= @post.message %>
+          </p>
+          <p class="post-datetime">
+            <%= @post.created_at %>
+          </p>
+        </div>
+        <div class="post-author">
+          <img class="author-icon" src="/icon_113240_256.png" alt="">
+          <p class="author-name">
+            <%= @post.author %>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
