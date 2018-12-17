@@ -1,0 +1,23 @@
+<main>
+  <div class="container">
+    <div id="posts">
+
+      <h2>ユーザ情報 更新</h2>
+      <div id="post-error">
+        <ul>
+          <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+      <%= form_tag(update_url) do %>
+        <h3>ユーザー名</h3>
+        <input type="text" name="name" value="<%= @user.name %>">
+        <h3>メールアドレス</h3>
+        <input type="text" name="email" value="<%= @user.email %>">
+        <input id="submit-button" type="submit" value="更新">
+      <% end %>
+
+    </div>
+  </div>
+</main>

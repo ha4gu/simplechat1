@@ -20,4 +20,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    if @user.save
+      redirect_to(user_url)
+    else
+      render("users/edit")
+    end
+  end
+
 end
