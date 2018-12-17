@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get  'users',            to: 'users#index'
+  get  'register',         to: 'users#new'
+  post 'register',         to: 'users#register'
+
   get  'chat',     to: 'posts#index'
   get  'chat/:id', to: 'posts#show'
   get  'new',      to: 'posts#new'
