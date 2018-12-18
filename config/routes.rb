@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get  'users/:id', to: 'users#show', as: 'user'
   get  'register',  to: 'users#new'
   post 'register',  to: 'users#register'
-  get  'users/:id/edit',   to: 'users#edit'
+  get  'users/:id/edit',   to: 'users#edit', as: 'edit'
   post 'users/:id/update', to: 'users#update', as: 'update'
 
   get  'chat',     to: 'posts#index'

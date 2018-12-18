@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   end
 
   def register
-    @user = User.new(name: params[:name], email: params[:email])
+    @user = User.new(name: params[:name], email: params[:email],
+      image_name: "iconfinder_8_avatar_2754583.png" )
     if @user.save
       redirect_to(chat_url)
     else

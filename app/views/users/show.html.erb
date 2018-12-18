@@ -1,10 +1,13 @@
 <main>
   <div class="container">
     <div id="users">
-
-      <h2>User's info:</h2>
-        <%= @user.name %> / <%= @user.email %><br>
-
+      <h2>ユーザ情報</h2>
+        ユーザ名: <%= @user.name %><br>
+        メールアドレス: <%= @user.email %><br>
+        アイコン: <img class="icon-medium" src="<%= "/icons/#{@user.image_name}" %>"><br>
+      <div>
+        <%= link_to("編集", edit_url) %>
+      </div>
     </div>
   </div>
 </main>

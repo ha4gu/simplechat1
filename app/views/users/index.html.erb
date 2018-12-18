@@ -1,9 +1,13 @@
 <main>
   <div class="container">
     <div id="users">
-
+      <h2>ユーザ一覧</h2>
       <% @users.each do |user| %>
-        <%= user.name %> / <%= user.email %><br>
+        <%= link_to("/users/#{user.id}/") do %>
+          <img class="icon-small" src="<%= "/icons/#{user.image_name}" %>">
+          <%= "#{user.name} / #{user.email}" %>
+        <% end %>
+        <br>
       <% end %>
 
     </div>
