@@ -10,7 +10,7 @@ User.create(
   name:  "ha4gu",
   email: "ha4gu@example.com",
   image_name: "iconfinder_12_avatar_2754577.png",
-  # password:              "foobar",
+  password:              "foobar",
   # password_confirmation: "foobar",
   #admin: true
 )
@@ -19,7 +19,7 @@ User.create(
   name:  "Hoge",
   email: "hoge@example.com",
   image_name: "iconfinder_3_avatar_2754579.png",
-  # password:              "foobar",
+  password:              "foobar",
   # password_confirmation: "foobar",
   #admin: true
 )
@@ -28,7 +28,7 @@ User.create(
   name:  "Fuga",
   email: "fuga@example.com",
   image_name: "iconfinder_9_avatar_2754584.png",
-  # password:              "foobar",
+  password:              "foobar",
   # password_confirmation: "foobar",
   #admin: true
 )

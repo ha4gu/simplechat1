@@ -15,10 +15,16 @@
       </div>
       <div id="header-menu">
         <ul>
-          <li><%= link_to("このアプリについて", about_url) %></li>
-          <li><%= link_to("新規登録", register_url) %></li>
-          <li><%= link_to("ログイン","#") %></li>
-          <li><%= link_to("ユーザ一覧", users_url) %></li>
+          <% if @current_user %>
+            <li>ログイン中: <%= @current_user.name %></li>
+            <li><%= link_to("投稿一覧", chat_url) %></li>
+            <li><%= link_to("ユーザ一覧", users_url) %></li>
+            <li><%= link_to("ログアウト", logout_url, {method: :post}) %></li>
+          <% else %>
+            <li><%= link_to("このアプリについて", about_url) %></li>
+            <li><%= link_to("新規登録", register_url) %></li>
+            <li><%= link_to("ログイン",login_url) %></li>
+          <% end %>
         </ul>
       </div>
     </header>

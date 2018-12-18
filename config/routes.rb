@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post 'register',  to: 'users#register'
   get  'users/:id/edit',   to: 'users#edit', as: 'edit'
   post 'users/:id/update', to: 'users#update', as: 'update'
+  get  'login',     to: 'users#login_form'
+  post 'login',     to: 'users#login'
+  post 'logout',    to: 'users#logout'
 
   get  'chat',     to: 'posts#index'
   get  'chat/:id', to: 'posts#show'

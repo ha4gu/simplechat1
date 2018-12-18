@@ -11,10 +11,12 @@
         </ul>
       </div>
       <%= form_for(register_url) do %>
-        <h3>ユーザー名</h3>
+        <h3>ユーザ名</h3>
         <input type="text" name="name" value="<%= @user.name %>">
         <h3>メールアドレス</h3>
         <input type="text" name="email" value="<%= @user.email %>">
+        <h3>パスワード</h3>
+        <input type="password" name="password" value="<%= @user.password %>">
         <input id="submit-button" type="submit" value="登録">
       <% end %>
 

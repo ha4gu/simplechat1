@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :must_be_authenticated
+
   def index
     @posts = Post.all.order(created_at: :desc)
   end
