@@ -5,9 +5,13 @@
         ユーザ名: <%= @user.name %><br>
         メールアドレス: <%= @user.email %><br>
         アイコン: <img class="icon-medium" src="<%= "/icons/#{@user.image_name}" %>"><br>
+
+      <% if @current_user.id == @user.id %>
       <div>
         <%= link_to("編集", edit_url) %>
       </div>
+      <% end %>
+
     </div>
   </div>
 </main>

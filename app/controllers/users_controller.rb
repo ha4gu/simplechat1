@@ -2,6 +2,11 @@ class UsersController < ApplicationController
 
   before_action :must_be_authenticated, {only: [:index, :show, :edit, :update, :logout]}
   before_action :must_not_be_authenticated, {only: [:new, :register, :login_form, :login]}
+  before_action :ensure_same_user, {only: [:edit, :update]}
+
+  def ensure_same_user
+    redirect_to(users_url) if @current_user.id != params[:id].to_i
+  end
 
   def index
     @users = User.all
