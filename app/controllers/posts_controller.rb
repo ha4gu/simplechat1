@@ -11,18 +11,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new
-    @post = Post.new
-  end
-
   def create
     @post = Post.new(message: params[:message],
       author: @current_user.name)
     if @post.save
-      redirect_to(chat_url)
+      redirect_to chat_url
     else
       @posts = Post.all.order(created_at: :desc)
-      render "index"
+      render :index
     end
   end
 
