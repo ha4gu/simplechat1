@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get  'chat',     to: 'posts#index'
   get  'chat/:id', to: 'posts#show'
-  post 'create',   to: 'posts#create'
+  post 'chat',   to: 'posts#create', as: 'create'
 
   root 'static#top'
   get  'about', to: 'static#about'
