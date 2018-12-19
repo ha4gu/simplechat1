@@ -2,6 +2,22 @@
   <div class="container">
     <div id="posts">
 
+      <div id="post-form">
+        <div id="post-error">
+          <ul>
+            <% @post.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+            <% end %>
+          </ul>
+        </div>
+        <%= form_tag(create_url) do %>
+        <div id="form-message">
+          <textarea id="input-message" name="message"><%= @post.message %></textarea>
+        </div>
+        <input id="submit-button" type="submit" value="投稿">
+        <% end %>
+      </div>
+
       <% @posts.each do |post| %>
         <div class="post others-post">
           <div class="post-content">

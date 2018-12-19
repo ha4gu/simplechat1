@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
+    @post = Post.new
   end
 
   def show
@@ -15,11 +16,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(message: params[:message], author: params[:author])
+    @post = Post.new(message: params[:message],
+      author: @current_user.name)
     if @post.save
       redirect_to(chat_url)
     else
-      render("posts/new")
+      @posts = Post.all.order(created_at: :desc)
+      render "index"
     end
   end
 
