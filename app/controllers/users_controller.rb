@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def register
     @user = User.new(name: params[:name], email: params[:email],
-      image_name: "iconfinder_8_avatar_2754583.png",
+      image_name: params[:icon],
       password: params[:password] )
     if @user.save
       session[:user_id] = @user.id
@@ -40,6 +40,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
+    @user.image_name = params[:icon]
     if @user.save
       redirect_to(user_url)
     else

@@ -2,7 +2,7 @@
   <div class="container">
     <div id="posts">
 
-      <h2>新規登録(仮)</h2>
+      <h2>ユーザ新規登録</h2>
       <div id="post-error">
         <ul>
           <% @user.errors.full_messages.each do |error| %>
@@ -17,6 +17,23 @@
         <input type="text" name="email" value="<%= @user.email %>">
         <h3>パスワード</h3>
         <input type="password" name="password" value="<%= @user.password %>">
+        <p>
+          <label>アイコン
+            <select name="icon">
+              <option value="iconfinder_4_avatar_2754580.png">女性1</option>
+              <option value="iconfinder_5_avatar_2754581.png">女性2</option>
+              <option value="iconfinder_9_avatar_2754584.png">女性3</option>
+              <option value="iconfinder_11_avatar_2754576.png">女性4</option>
+              <option value="iconfinder_1_avatar_2754574.png">男性1</option>
+              <option value="iconfinder_2_avatar_2754578.png">男性2</option>
+              <option value="iconfinder_3_avatar_2754579.png">男性3</option>
+              <option value="iconfinder_7_avatar_2754582.png">男性4</option>
+              <option value="iconfinder_8_avatar_2754583.png">男性5</option>
+              <option value="iconfinder_10_avatar_2754575.png">男性6</option>
+              <option value="iconfinder_12_avatar_2754577.png">男性7</option>
+            </select>
+          </label>
+        </p>
         <input id="submit-button" type="submit" value="登録">
       <% end %>
 
