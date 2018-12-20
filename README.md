@@ -1,24 +1,32 @@
-# README
+# Simple Chat ver.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## このアプリについて
 
-Things you may want to cover:
+単純な作りのチャットアプリです。
+Ruby on Rails5を使用しています。
 
-* Ruby version
+## 作成の意図
 
-* System dependencies
+[ProgateのRailsコース](https://prog-8.com/languages/rails5)で学んだ内容を定着させるために作成しました。
+本アプリ内で使用している手法・要素はほとんどがProgateで学習したものです。
 
-* Configuration
+## 今後
 
-* Database creation
+次は[Railsチュートリアル](https://railstutorial.jp/)に沿いながら、改めて同様のチャットアプリを作成してみます。
 
-* Database initialization
+---
 
-* How to run the test suite
+## 使用させて頂いた素材など
 
-* Services (job queues, cache servers, search engines, etc.)
+CSSのリセットにressを使用しています。
+[filipelinhares/ress: A modern CSS reset](https://github.com/filipelinhares/ress)
 
-* Deployment instructions
+フォント設定はこちらの記事を参考にしています。
+[2018年以降はコレで決まり！Web サイトで指定するゴシック体・明朝体・等幅の font\-family 設定 \- Corredor](http://neos21.hatenablog.com/entry/2017/11/12/080000)
 
-* ...
+人物アイコンはこちらのものを使用しています。
+[Business & avatar icons by Hopnguyen Mr](https://www.iconfinder.com/iconsets/business-avatar-1)
+
+背景画像はこちらのものを使用しています。
+[Sneaker Mesh Fabric \- Subtle Patterns \| Free textures for your next web project](https://www.toptal.com/designers/subtlepatterns/sneaker-mesh-fabric/)
+
