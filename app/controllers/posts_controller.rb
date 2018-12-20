@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(message: params[:message],
-      author: @current_user.name)
+      author_id: @current_user.id.to_i)
     if @post.save
       redirect_to chat_url
     else

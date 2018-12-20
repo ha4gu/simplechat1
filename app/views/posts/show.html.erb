@@ -11,12 +11,13 @@
             <%= @post.jsttime %>
           </p>
         </div>
-        <div class="post-author">
-          <img class="author-icon" src="/icons/iconfinder_2_avatar_2754578.png" alt="">
-          <p class="author-name">
-            <%= @post.author %>
-          </p>
-        </div>
+          <div class="post-author">
+            <% post_author = User.find(@post.author_id) %>
+            <img class="author-icon" src="/icons/<%= post_author.image_name %>" alt="">
+            <p class="author-name">
+              <%= post_author.name %>
+            </p>
+          </div>
       </div>
 
     </div>
