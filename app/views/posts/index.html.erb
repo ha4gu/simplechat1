@@ -19,7 +19,8 @@
       </div>
 
       <% @posts.each do |post| %>
-        <div class="post others-post">
+        <% @current_user.id == post.author_id ? post_type = "my-post" : post_type = "others-post" %>
+        <div class="post <%= post_type %>">
           <div class="post-content">
             <p class="post-message">
               <%= post.message %>
@@ -37,58 +38,6 @@
           </div>
         </div>
       <% end %>
-
-      <div class="post others-post">
-        <div class="post-content">
-          <p class="post-message">
-            This is a post.
-            The quick brown fox jumps over the lazy dog.
-            The quick brown fox jumps over the lazy dog.
-          </p>
-          <p class="post-datetime">
-              2018-12-13 11:31:05
-          </p>
-        </div>
-        <div class="post-author">
-          <img class="author-icon" src="/icons/iconfinder_2_avatar_2754578.png" alt="">
-          <p class="author-name">Hoge-O!</p>
-        </div>
-      </div>
-
-      <div class="post my-post">
-        <div class="post-content">
-          <p class="post-message">
-            This is a post.
-            The quick brown fox jumps over the lazy dog.
-            The quick brown fox jumps over the lazy dog.
-          </p>
-          <p class="post-datetime">
-            2018-12-13 11:31:05
-          </p>
-        </div>
-        <div class="post-author">
-          <img class="author-icon" src="/icons/iconfinder_5_avatar_2754581.png" alt="_">
-          <p class="author-name">Jaison Taro</p>
-        </div>
-      </div>
-
-      <div class="post others-post">
-        <div class="post-content">
-          <p class="post-message">
-            This is a post.
-            The quick brown fox jumps over the lazy dog.
-            The quick brown fox jumps over the lazy dog.
-          </p>
-          <p class="post-datetime">
-            2018-12-13 11:31:05
-          </p>
-        </div>
-        <div class="post-author">
-          <img class="author-icon" src="/icons/iconfinder_2_avatar_2754578.png" alt="">
-          <p class="author-name">Hoge-O!</p>
-        </div>
-      </div>
-
 
     </div>
   </div>

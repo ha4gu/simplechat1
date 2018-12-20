@@ -1,8 +1,8 @@
 <main>
   <div class="container">
     <div id="posts">
-
-      <div class="post others-post">
+      <% @current_user.id == @post.author_id ? post_type = "my-post" : post_type = "others-post" %>
+      <div class="post <%= post_type %>">
         <div class="post-content">
           <p class="post-message">
             <%= @post.message %>
