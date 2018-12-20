@@ -1,4 +1,4 @@
-# Simple Chat ver.1
+# SimpleChat ver.1
 
 ## このアプリについて
 
